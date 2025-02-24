@@ -1,12 +1,15 @@
 body {
-    background-color: #e28743;
+    background-color: #000000;
     font-family: Arial, sans-serif;
 }
 
-h1 {
-    color: #09912b;
+section {
+    color: #ffffff;
     text-align: center;
+    background-color: #0C7075;
 }
+
+
 
 p {
     font-size: 18px;
