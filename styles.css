@@ -7,26 +7,22 @@ body {
     flex-direction: column;
 }
 
-button {
-    display: block;
-    margin: 20px auto;
-    color: red;
-    font-size: 20px;
-    background: none;
-    border: 2px solid red;
+/* Styling the input field */
+input[type="text"] {
+    margin: 20px;
     padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    transform: scale(1.5);
+    font-size: 18px;
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+    text-align: center;
 }
 
 /* Container to keep heart & text centered */
 .heart-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Ensures both heart and text stay centered */
+    align-items: center;
     justify-content: center;
     display: none; /* Initially hidden */
 }
@@ -37,7 +33,7 @@ button:hover {
     width: 100px;
     height: 100px;
     background-color: red;
-    transform: rotate(0deg);
+    transform: rotate(45deg);
     box-shadow: 0 0 50px red, 0 0 50px red inset;
     animation: pulse 2s infinite;
 }
@@ -83,7 +79,7 @@ button:hover {
 .loading_text {
     color: red;
     font-size: 20px;
-    margin-top: 80px; /* Adjust spacing below the heart */
+    margin-top: 75px; /* Adjust spacing below the heart */
     text-align: center;
     animation: fade 2s infinite;
 }
@@ -92,4 +88,12 @@ button:hover {
     0% { opacity: 1; }
     50% { opacity: 0.5; }
     100% { opacity: 1; }
+}
+
+/* Message for incorrect input */
+.error-message {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
 }
