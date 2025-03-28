@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 button {
@@ -21,15 +22,23 @@ button:hover {
     transform: scale(1.5);
 }
 
+/* Container to keep heart & text centered */
+.heart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures both heart and text stay centered */
+    justify-content: center;
+    display: none; /* Initially hidden */
+}
+
 /* Heart */
 .heart {
     position: relative;
     width: 100px;
     height: 100px;
     background-color: red;
-    transform: rotate(45deg);
-    margin-top: 50px;
-    box-shadow:0 0 50px red, 0 0 50px red inset;
+    transform: rotate(0deg);
+    box-shadow: 0 0 50px red, 0 0 50px red inset;
     animation: pulse 2s infinite;
 }
 
@@ -41,8 +50,7 @@ button:hover {
     height: 100px;
     background-color: red;
     border-radius: 50%;
-    box-shadow:0 0 50px red, 0 0 50px red inset;
-
+    box-shadow: 0 0 50px red, 0 0 50px red inset;
 }
 
 .heart::before {
@@ -58,15 +66,30 @@ button:hover {
 /* Animation */
 @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(1) rotate(45deg);
         opacity: 1;
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.2) rotate(45deg);
         opacity: 0.8;
     }
     100% {
-        transform: scale(1);
+        transform: scale(1) rotate(45deg);
         opacity: 1;
     }
+}
+
+/* Loading Text */
+.loading_text {
+    color: red;
+    font-size: 20px;
+    margin-top: 80px; /* Adjust spacing below the heart */
+    text-align: center;
+    animation: fade 2s infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
