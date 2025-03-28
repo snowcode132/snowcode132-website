@@ -1,6 +1,6 @@
 function checkNumber() {
     const inputNumber = document.getElementById("numberInput").value;
-    const targetNumber = "022424"; // Set your trigger number here
+    const targetNumber = "02/24/24"; // Set your trigger number here
 
     const heartContainer = document.querySelector(".heart-container");
     const errorMessage = document.getElementById("errorMessage");

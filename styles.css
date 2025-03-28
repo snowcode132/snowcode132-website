@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    margin: 0;
 }
 
 /* Styling the input field */
@@ -16,6 +17,8 @@ input[type="text"] {
     background-color: transparent;
     color: red;
     text-align: center;
+    width: 80%; /* Make input field more flexible */
+    max-width: 300px; /* Limit max width for large screens */
 }
 
 /* Container to keep heart & text centered */
@@ -96,4 +99,28 @@ input[type="text"] {
     font-size: 18px;
     margin-top: 10px;
     text-align: center;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+    .heart {
+        width: 80px;
+        height: 80px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 80px;
+        height: 80px;
+    }
+
+    .loading_text {
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        font-size: 16px;
+        padding: 8px 16px;
+        width: 90%; /* Increase width on mobile */
+    }
 }
