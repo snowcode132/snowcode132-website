@@ -8,7 +8,8 @@
 </head>
 <body>
  
-    <input type="text" id="numberInput" placeholder="Enter a number" oninput="checkNumber()">
+    <!-- Input field for number -->
+    <input type="text" id="numberInput" placeholder="Enter a number" onkeypress="checkEnter(event)">
 
     <!-- Error message -->
     <div id="errorMessage" class="error-message" style="display: none;">Incorrect number! Please try again.</div>
