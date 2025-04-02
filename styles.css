@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-/* Styling the input field */
+/* Input field */
 input[type="text"] {
     margin: 20px;
     padding: 10px 20px;
@@ -17,17 +17,17 @@ input[type="text"] {
     background-color: transparent;
     color: red;
     text-align: center;
-    width: 80%; /* Make input field more flexible */
-    max-width: 300px; /* Limit max width for large screens */
+    width: 80%;
+    max-width: 300px;
 }
 
-/* Container to keep heart & text centered */
+/* Heart + Text Container */
 .heart-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none; /* Initially hidden */
+    display: none; /* Hide initially */
 }
 
 /* Heart */
@@ -38,7 +38,7 @@ input[type="text"] {
     background-color: red;
     transform: rotate(45deg);
     box-shadow: 0 0 50px red, 0 0 50px red inset;
-    animation: pulse 2s infinite;
+    animation: pulse 1.5s infinite;
 }
 
 .heart::before,
@@ -62,7 +62,7 @@ input[type="text"] {
     top: 0;
 }
 
-/* Animation */
+/* Heart Animation */
 @keyframes pulse {
     0% {
         transform: scale(1) rotate(45deg);
@@ -82,7 +82,7 @@ input[type="text"] {
 .loading_text {
     color: red;
     font-size: 20px;
-    margin-top: 75px; /* Adjust spacing below the heart */
+    margin-top: 75px;
     text-align: center;
     animation: fade 2s infinite;
 }
@@ -93,7 +93,7 @@ input[type="text"] {
     100% { opacity: 1; }
 }
 
-/* Message for incorrect input */
+/* Error Message */
 .error-message {
     color: white;
     font-size: 18px;
@@ -101,7 +101,19 @@ input[type="text"] {
     text-align: center;
 }
 
-/* Mobile-specific styles */
+/* YouTube Video */
+.video-container {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* Responsive for Mobile */
 @media (max-width: 480px) {
     .heart {
         width: 80px;
@@ -121,6 +133,11 @@ input[type="text"] {
     input[type="text"] {
         font-size: 16px;
         padding: 8px 16px;
-        width: 90%; /* Increase width on mobile */
+        width: 90%;
+    }
+
+    iframe {
+        width: 90%;
+        height: 200px;
     }
 }
